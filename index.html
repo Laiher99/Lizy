@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lizy te amo</title>
+    <title>Para mi peque ❤️</title>
     <style>
         * {
             margin: 0;
@@ -12,24 +13,103 @@
         }
 
         body {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
-            justify-content: center;  /* centrado horizontal */
-            align-items: center;      /* centrado vertical */
-            background-color: #f0f0f0; /* color de fondo opcional */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #f5f0fa 0%, #e8e0f5 100%);
+            font-family: 'Segoe UI', 'Arial', system-ui, sans-serif;
+            padding: 20px;
+        }
+
+        /* Contenedor principal para mejor control */
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
         }
 
         img {
             max-width: 90%;
-            max-height: 90%;
-            object-fit: contain; /* evita deformaciones, mantiene proporción */
-            border-radius: 8px;   /* opcional: esquinas redondeadas */
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* opcional: sombra suave */
+            max-height: 50vh;
+            object-fit: contain;
+            border-radius: 20px;
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
+            border: 3px solid white;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            margin-top: 25px;
+            font-size: 2.2rem;
+            background: linear-gradient(45deg, #d23669, #8b4b8b);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .texto-bonito {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #4a2c4a;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 18px 24px;
+            border-radius: 40px;
+            backdrop-filter: blur(2px);
+            font-family: 'Georgia', serif;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+
+        /* Corazón decorativo opcional */
+        .corazon {
+            margin-top: 20px;
+            font-size: 1.8rem;
+            animation: latido 1.2s infinite;
+            display: inline-block;
+        }
+
+        @keyframes latido {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+
+        /* Responsive */
+        @media (max-width: 550px) {
+            h2 { font-size: 1.6rem; }
+            .texto-bonito { font-size: 1rem; padding: 14px 18px; }
         }
     </style>
 </head>
 <body>
-    <!-- Cambia 'ruta-de-tu-imagen.jpg' por la URL o ruta real de tu imagen -->
-    <img src="https:./Lizy.png" alt="Imagen centrada">
+    <div class="contenedor">
+        <!-- Cambia 'mi-imagen.jpg' por el nombre real de tu imagen (en la misma carpeta) -->
+        <img src="./Lizy.jpg" alt="Nuestra foto especial">
+
+        <h2>te quiero mucho mi peque</h2>
+
+        <div class="texto-bonito">
+            ✨ Eres la razón por la que mis días tienen luz, 
+            la melodía más bonita que mi corazón ha escuchado. 
+            Cada momento a tu lado es un regalo que atesoro. 
+            Gracias por hacer mi vida más dulce y llena de amor. 💖
+        </div>
+
+        <div class="corazon">
+            ❤️
+        </div>
+    </div>
 </body>
 </html>
