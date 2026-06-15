@@ -1,115 +1,151 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para mi peque ❤️</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para mi peque W</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
 
-        body {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #f5f0fa 0%, #e8e0f5 100%);
-            font-family: 'Segoe UI', 'Arial', system-ui, sans-serif;
-            padding: 20px;
-        }
+body {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background: linear-gradient(135deg, #f5f0fa, #fce4ec);
+font-family: 'Segoe UI', 'Arial', system-ui;
+padding: 20px;
+}
 
-        /* Contenedor principal para mejor control */
-        .contenedor {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 600px;
-            width: 100%;
-            text-align: center;
-        }
+/* Contenedor principal para mejor control */
+.contenedor {
+display: flex;
+flex-direction: column;
+align-items: center;
+max-width: 600px;
+width: 100%;
+text-align: center;
+}
 
-        img {
-            max-width: 90%;
-            max-height: 50vh;
-            object-fit: contain;
-            border-radius: 20px;
-            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
-            border: 3px solid white;
-            transition: transform 0.3s ease;
-        }
+img {
+max-width: 90%;
+max-height: 50vh;
+object-fit: contain;
+border-radius: 20px;
+box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
+border: 3px solid white;
+transition: transform 0.3s ease;
+}
 
-        img:hover {
-            transform: scale(1.02);
-        }
+img:hover {
+transform: scale(1.02);
+}
 
-        h2 {
-            margin-top: 25px;
-            font-size: 2.2rem;
-            background: linear-gradient(45deg, #d23669, #8b4b8b);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
+h2 {
+margin-top: 25px;
+font-size: 2.2rem;
+background: linear-gradient(45deg, #d23669, #b23c6e);
+background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
+font-weight: 700;
+letter-spacing: 1px;
+}
 
-        .texto-bonito {
-            margin-top: 20px;
-            font-size: 1.2rem;
-            line-height: 1.6;
-            color: #4a2c4a;
-            background: rgba(255, 255, 255, 0.7);
-            padding: 18px 24px;
-            border-radius: 40px;
-            backdrop-filter: blur(2px);
-            font-family: 'Georgia', serif;
-            max-width: 500px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border: 1px solid rgba(255,255,255,0.5);
-        }
+.texto-bonito {
+margin-top: 20px;
+font-size: 1.2rem;
+line-height: 1.6;
+color: #4a2c4a;
+background: rgba(255, 255, 255, 0.7);
+padding: 18px 24px;
+border-radius: 40px;
+backdrop-filter: blur(2px);
+font-family: 'Georgia', serif;
+max-width: 500px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+border: 1px solid rgba(255,255,255,0.5);
+}
 
-        /* Corazón decorativo opcional */
-        .corazon {
-            margin-top: 20px;
-            font-size: 1.8rem;
-            animation: latido 1.2s infinite;
-            display: inline-block;
-        }
+/* Corazon decorativo opcional */
+.corazon {
+margin-top: 20px;
+font-size: 1.8rem;
+animation: latido 1.2s infinite;
+display: inline-block;
+}
 
-        @keyframes latido {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.15); }
-        }
+@keyframes latido {
+0%, 100% { transform: scale(1); }
+50% { transform: scale(1.15); }
+}
 
-        /* Responsive */
-        @media (max-width: 550px) {
-            h2 { font-size: 1.6rem; }
-            .texto-bonito { font-size: 1rem; padding: 14px 18px; }
-        }
-    </style>
+/* Verso de los 10 meses */
+.verso-meses {
+margin-top: 25px;
+font-size: 1rem;
+line-height: 1.8;
+color: #4a2c4a;
+background: rgba(255, 230, 240, 0.85);
+padding: 20px;
+border-radius: 50px;
+font-family: 'Georgia', serif;
+font-style: italic;
+border-left: 4px solid #d23669;
+border-right: 4px solid #d23669;
+max-width: 550px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.verso-meses p {
+margin: 8px 0;
+}
+
+/* Responsive */
+@media (max-width: 550px) {
+h2 { font-size: 1.6rem; }
+.texto-bonito { font-size: 1rem; padding: 14px; }
+.verso-meses { font-size: 0.9rem; padding: 15px; }
+}
+</style>
 </head>
 <body>
-    <div class="contenedor">
-        <!-- Cambia 'mi-imagen.jpg' por el nombre real de tu imagen (en la misma carpeta) -->
-        <img src="./Lizy.png" alt="Nuestra foto especial">
+<div class="contenedor">
+<!-- Cambia 'mi-imagen.jpg' por el nombre real de tu archivo -->
+<img src="./Lizy.png" alt="Nuestra foto especial">
 
-        <h2>te quiero mucho mi peque</h2>
+<h2>te quiero mucho mi peque</h2>
 
-        <div class="texto-bonito">
-            ✨ Eres la razón por la que mis días tienen luz, 
-            la melodía más bonita que mi corazón ha escuchado. 
-            Cada momento a tu lado es un regalo que atesoro. 
-            Gracias por hacer mi vida más dulce y llena de amor. 💖
-        </div>
+<div class="texto-bonito">
+✨ Eres la razón por la que mis días tienen sentido, <br>
+la melodía más bonita que mi corazón ha escuchado. <br>
+Cada momento a tu lado es un regalo que atesoro. <br>
+Gracias por hacer mi vida más dulce y llena de color. ✨
+</div>
 
-        <div class="corazon">
-            ❤️
-        </div>
-    </div>
+<div class="corazon">
+❤️
+</div>
+
+<!-- Verso agregado por los 10 meses -->
+<div class="verso-meses">
+<p>🌸 <strong>10 meses a tu lado</strong> 🌸</p>
+<p>Diez lunas han pintado nuestro caminar,</p>
+<p>diez abriles en caricias, diez octubres al soñar.</p>
+<p>Contigo aprendí que el tiempo vuela cuando es feliz,</p>
+<p>que cada día a tu lado es un nuevo descubrir.</p>
+<p>💕</p>
+<p>Tus risas son las estrellas de mis noches más serenas,</p>
+<p>tus abrazos, el refugio donde el alma se encadena.</p>
+<p>Diez meses de promesas susurradas al amanecer,</p>
+<p>y un futuro entero esperando florecer.</p>
+<p>🌹 <em>Gracias por estos 10 meses, mi amor.</em> 🌹</p>
+</div>
+</div>
 </body>
 </html>
