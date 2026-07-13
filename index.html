@@ -1,151 +1,284 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para mi peque W</title>
-<style>
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para mi peque W - 11 meses</title>
+  <style>
+    /* --- Reset y configuración base --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-min-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-background: linear-gradient(135deg, #f5f0fa, #fce4ec);
-font-family: 'Segoe UI', 'Arial', system-ui;
-padding: 20px;
-}
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #f5f0fa, #fce4ec);
+      font-family: 'Segoe UI', 'Arial', system-ui, sans-serif;
+      padding: 20px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-/* Contenedor principal para mejor control */
-.contenedor {
-display: flex;
-flex-direction: column;
-align-items: center;
-max-width: 600px;
-width: 100%;
-text-align: center;
-}
+    /* --- Contenedor principal --- */
+    .contenedor {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 650px;
+      width: 100%;
+      text-align: center;
+      gap: 20px;
+    }
 
-img {
-max-width: 90%;
-max-height: 50vh;
-object-fit: contain;
-border-radius: 20px;
-box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
-border: 3px solid white;
-transition: transform 0.3s ease;
-}
+    /* --- Galería de fotos: dos imágenes --- */
+    .galeria {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+    }
 
-img:hover {
-transform: scale(1.02);
-}
+    .galeria img {
+      max-width: 45%;
+      min-width: 200px;
+      flex: 1 1 200px;
+      max-height: 40vh;
+      height: auto;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
+      border: 3px solid white;
+      transition: transform 0.3s ease;
+      display: block;
+    }
 
-h2 {
-margin-top: 25px;
-font-size: 2.2rem;
-background: linear-gradient(45deg, #d23669, #b23c6e);
-background-clip: text;
--webkit-background-clip: text;
-color: transparent;
-font-weight: 700;
-letter-spacing: 1px;
-}
+    .galeria img:hover {
+      transform: scale(1.03);
+    }
 
-.texto-bonito {
-margin-top: 20px;
-font-size: 1.2rem;
-line-height: 1.6;
-color: #4a2c4a;
-background: rgba(255, 255, 255, 0.7);
-padding: 18px 24px;
-border-radius: 40px;
-backdrop-filter: blur(2px);
-font-family: 'Georgia', serif;
-max-width: 500px;
-box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-border: 1px solid rgba(255,255,255,0.5);
-}
+    /* Si solo quieres una imagen (para móviles muy pequeños) */
+    @media (max-width: 480px) {
+      .galeria img {
+        max-width: 90%;
+        flex: 1 1 100%;
+      }
+    }
 
-/* Corazon decorativo opcional */
-.corazon {
-margin-top: 20px;
-font-size: 1.8rem;
-animation: latido 1.2s infinite;
-display: inline-block;
-}
+    /* --- Títulos --- */
+    h1 {
+      font-size: 2.2rem;
+      background: linear-gradient(45deg, #d23669, #b23c6e);
+      color: #d23669;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin: 0;
+      line-height: 1.2;
+    }
 
-@keyframes latido {
-0%, 100% { transform: scale(1); }
-50% { transform: scale(1.15); }
-}
+    .texto-bonito {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: #3d1f3d;
+      background: rgba(255, 255, 255, 0.75);
+      padding: 20px 28px;
+      border-radius: 40px;
+      backdrop-filter: blur(2px);
+      font-family: 'Georgia', serif;
+      max-width: 550px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      margin: 0;
+    }
 
-/* Verso de los 10 meses */
-.verso-meses {
-margin-top: 25px;
-font-size: 1rem;
-line-height: 1.8;
-color: #4a2c4a;
-background: rgba(255, 230, 240, 0.85);
-padding: 20px;
-border-radius: 50px;
-font-family: 'Georgia', serif;
-font-style: italic;
-border-left: 4px solid #d23669;
-border-right: 4px solid #d23669;
-max-width: 550px;
-box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-}
+    .corazon {
+      font-size: 2.2rem;
+      animation: latido 1.2s infinite ease-in-out;
+      display: inline-block;
+    }
 
-.verso-meses p {
-margin: 8px 0;
-}
+    @keyframes latido {
+      0%,
+      100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
 
-/* Responsive */
-@media (max-width: 550px) {
-h2 { font-size: 1.6rem; }
-.texto-bonito { font-size: 1rem; padding: 14px; }
-.verso-meses { font-size: 0.9rem; padding: 15px; }
-}
-</style>
+    /* --- Versos: contenedor para múltiples meses --- */
+    .versos-container {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      width: 100%;
+      max-width: 550px;
+    }
+
+    .verso-meses {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: #3d1f3d;
+      background: rgba(255, 230, 240, 0.9);
+      padding: 24px 22px;
+      border-radius: 50px;
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      border-left: 5px solid #d23669;
+      border-right: 5px solid #d23669;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      margin: 0;
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .verso-meses:hover {
+      transform: scale(1.01);
+    }
+
+    .verso-meses p {
+      margin: 10px 0;
+    }
+
+    .verso-meses p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .verso-meses strong {
+      color: #b23c6e;
+      font-style: normal;
+    }
+
+    .verso-meses em {
+      color: #b23c6e;
+      font-style: italic;
+    }
+
+    /* Variante de color para el mes 11 (opcional, solo estético) */
+    .verso-meses.mes-11 {
+      background: rgba(255, 240, 245, 0.95);
+      border-color: #b23c6e;
+      border-left-color: #8e2a5a;
+      border-right-color: #8e2a5a;
+    }
+
+    .verso-meses.mes-11 strong {
+      color: #8e2a5a;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 550px) {
+      .contenedor {
+        gap: 16px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .texto-bonito {
+        font-size: 1rem;
+        padding: 16px 20px;
+      }
+
+      .verso-meses {
+        font-size: 0.9rem;
+        padding: 18px 16px;
+        border-left-width: 3px;
+        border-right-width: 3px;
+      }
+
+      .corazon {
+        font-size: 1.8rem;
+      }
+
+      .galeria img {
+        max-height: 30vh;
+      }
+    }
+
+    /* --- Accesibilidad --- */
+    .galeria img:focus-visible {
+      outline: 3px solid #d23669;
+      outline-offset: 4px;
+    }
+  </style>
 </head>
 <body>
-<div class="contenedor">
-<!-- Cambia 'mi-imagen.jpg' por el nombre real de tu archivo -->
-<img src="./Lizy.png" alt="Nuestra foto especial">
+  <div class="contenedor">
+    <!--
+      📸 GALERÍA DE FOTOS (dos imágenes)
+      Cambia el nombre del archivo de la segunda foto si es necesario
+    -->
+    <div class="galeria">
+      <img
+        src="./Lizy.png"
+        alt="Nuestra foto especial, un recuerdo muy querido"
+        loading="lazy"
+      />
+      <img
+        src="./Lizy-11-meses.png"
+        alt="Nuestra foto más reciente, celebrando 11 meses juntos"
+        loading="lazy"
+      />
+    </div>
 
-<h2>te quiero mucho mi peque</h2>
+    <h1>te quiero mucho mi peque</h1>
 
-<div class="texto-bonito">
-✨ Eres la razón por la que mis días tienen sentido, <br>
-la melodía más bonita que mi corazón ha escuchado. <br>
-Cada momento a tu lado es un regalo que atesoro. <br>
-Gracias por hacer mi vida más dulce y llena de color. ✨
-</div>
+    <div class="texto-bonito">
+      ✨ Eres la razón por la que mis días tienen sentido, <br />
+      la melodía más bonita que mi corazón ha escuchado. <br />
+      Cada momento a tu lado es un regalo que atesoro. <br />
+      Gracias por hacer mi vida más dulce y llena de color. ✨
+    </div>
 
-<div class="corazon">
-❤️
-</div>
+    <div class="corazon" aria-hidden="true">❤️</div>
 
-<!-- Verso agregado por los 10 meses -->
-<div class="verso-meses">
-<p>🌸 <strong>10 meses a tu lado</strong> 🌸</p>
-<p>Diez lunas han pintado nuestro caminar,</p>
-<p>diez abriles en caricias, diez octubres al soñar.</p>
-<p>Contigo aprendí que el tiempo vuela cuando es feliz,</p>
-<p>que cada día a tu lado es un nuevo descubrir.</p>
-<p>💕</p>
-<p>Tus risas son las estrellas de mis noches más serenas,</p>
-<p>tus abrazos, el refugio donde el alma se encadena.</p>
-<p>Diez meses de promesas susurradas al amanecer,</p>
-<p>y un futuro entero esperando florecer.</p>
-<p>🌹 <em>Gracias por estos 10 meses, mi amor.</em> 🌹</p>
-</div>
-</div>
+    <!--
+      📜 VERSOS: 10 meses y 11 meses
+    -->
+    <div class="versos-container">
+      <!-- Verso de 10 meses -->
+      <div class="verso-meses">
+        <p>🌸 <strong>10 meses a tu lado</strong> 🌸</p>
+        <p>Diez lunas han pintado nuestro caminar,</p>
+        <p>diez abriles en caricias, diez octubres al soñar.</p>
+        <p>Contigo aprendí que el tiempo vuela cuando es feliz,</p>
+        <p>que cada día a tu lado es un nuevo descubrir.</p>
+        <p>💕</p>
+        <p>Tus risas son las estrellas de mis noches más serenas,</p>
+        <p>tus abrazos, el refugio donde el alma se encadena.</p>
+        <p>Diez meses de promesas susurradas al amanecer,</p>
+        <p>y un futuro entero esperando florecer.</p>
+        <p>🌹 <em>Gracias por estos 10 meses, mi amor.</em> 🌹</p>
+      </div>
+
+      <!-- 👇 NUEVO: Verso de 11 meses -->
+      <div class="verso-meses mes-11">
+        <p>🌺 <strong>11 meses celebrando nuestro amor</strong> 🌺</p>
+        <p>Once lunas han danzado en nuestro firmamento,</p>
+        <p>once sueños compartidos, once latidos al viento.</p>
+        <p>Cada día contigo es un poema sin final,</p>
+        <p>una historia de amor que no deja de brillar.</p>
+        <p>✨</p>
+        <p>Tus ojos son el mapa donde quiero perderme,</p>
+        <p>tus manos, el destino donde siempre encuentro verme.</p>
+        <p>Once meses de aprendizajes y de entregas sinceras,</p>
+        <p>y un amor que se fortalece con cada primavera.</p>
+        <p>🌹 <em>Gracias por estos 11 meses, mi vida entera.</em> 🌹</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
